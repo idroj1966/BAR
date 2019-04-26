@@ -31,10 +31,13 @@ function bar() {
   const llet = 'LLET';
   const cocaCola = 'COCA COLA';
   const cervesa = 'CERVESA';
-  const pregunta = 'Què vols prendre?';
+  const pregunta1 = 'Què vols prendre?';
+  const pregunta2 = 'Quina edat tens?';
   const missatge1 = 'Aquest nen de ';
   const missatge2 = ' anys, no pot prendre ';
   const missatge3 = ' anys, pot prendre ';
+  const missatge4 = '.';
+
 
   const nen = 14;
   const jove = 18;
@@ -44,16 +47,16 @@ function bar() {
   let beguda1 = beguda.toLocaleUpperCase();
 
   if (beguda1 === cocaCola || beguda1 === cervesa) {
-    let edat = prompt('Quina edat tens?');
+    let edat = prompt(pregunta2);
     if (parseInt(edat) < nen & (beguda1 === cocaCola || beguda1 === cervesa)) {
-      alert(missatge1 + edat + missatge2 + beguda + '.');
+      alert(missatge1 + edat + missatge2 + beguda + missatge4);
     }
     else {
       if ((parseInt(edat) > nen & parseInt(edat) < jove) & beguda1 === cervesa) {
-        alert(missatge1 + edat + missatge2 + beguda + '.');
+        alert(missatge1 + edat + missatge2 + beguda + missatge4);
       }
       else {
-        alert(missatge1 + edat + missatge3 + beguda + '.');
+        alert(missatge1 + edat + missatge3 + beguda + missatge4);
       }
     }
   }
